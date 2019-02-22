@@ -1,0 +1,8 @@
+PEUT VIVRE DANS (_#code espèce_, _#num. enclos_, nb. max. congénères)
+ENCLOS (_num. enclos_)
+OCCUPE (_#code espèce_, _#nom_, _#date début_, _#date fin_, _#num. enclos_)
+PÉRIODE (_date début_, _date fin_)
+ESPÈCE (_code espèce_, libellé)
+ANIMAL (_#code espèce_, _nom_, sexe, date naissance, date décès, #code espèce mère, #nom mère)
+PEUT COHABITER AVEC (_#code espèce_, _#code espèce commensale_, nb. max. commensaux)
+A PÈRE (_#code espèce_, _#nom_, _#code espèce père présumé_, _#nom père présumé_)

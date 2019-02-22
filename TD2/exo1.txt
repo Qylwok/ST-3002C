@@ -1,0 +1,2 @@
+PRODUIT(_IdProduit_, NomProduit, Qstock)
+NOMENCLATURE(_#IdProduit1_, _#IdProduit2_, QFabriquées)

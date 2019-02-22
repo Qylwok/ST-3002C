@@ -1,0 +1,9 @@
+1) On a num_commande et num_produit qui déterminent les 3 autres ==> clé primaire
+Par contre, on a aussi num_commande qui détermine num_client et num_représentant, deux attributs
+Donc cette relation n'est pas en 2ème Forme Normale (pId =/=> attr)
+
+2) Pour corriger, on fait une décomposition ==> 2 entités (Commande et Client)
+Commande(_num_Commande_, #num_Client)
+LigneDeCommande(_num_Commande_, _num_Produit_, quantité)
+Client(_num_Client_, num_représentant)
+==>Boyce-Cott également :D

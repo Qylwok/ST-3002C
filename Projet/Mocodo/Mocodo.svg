@@ -1,0 +1,308 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="1654" height="309" view_box="0 0 1654 309"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 21 Feb 2019 19:37:27</desc>
+
+<rect id="frame" x="0" y="0" width="1654" height="309" fill="none" stroke="none" stroke-width="0"/>
+
+<!-- Association done in competition -->
+<line x1="248" y1="116" x2="82" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="199.94798787913126" y="177" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="82" y1="116" x2="82" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="56.0" y="240" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-done in competition">
+	<path d="M 141 248 a 14 14 90 0 1 14 14 V 274 h -146 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 155 274.0 v 12 a 14 14 90 0 1 -14 14 H 23 a 14 14 90 0 1 -14 -14 V 274.0 H 146" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="9" y="248" width="146" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="9" y1="274" x2="155" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="16" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">done in competition</text>
+</g>
+
+<!-- Association done with rubiks -->
+<line x1="1206" y1="116" x2="248" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="1137" y="116.17183531272093" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="82" y1="116" x2="248" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="155" y="179.54705558586798" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-done with rubiks">
+	<path d="M 295 248 a 14 14 90 0 1 14 14 V 274 h -122 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 309 274.0 v 12 a 14 14 90 0 1 -14 14 H 201 a 14 14 90 0 1 -14 -14 V 274.0 H 122" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="187" y="248" width="122" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="187" y1="274" x2="309" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="194" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">done with rubiks</text>
+</g>
+
+<!-- Association round of type -->
+<line x1="1399" y1="116" x2="392" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="1314" y="118.28180319453335" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="82" y1="116" x2="392" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="155" y="146.64007157649843" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-round of type">
+	<path d="M 429 248 a 14 14 90 0 1 14 14 V 274 h -102 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 443 274.0 v 12 a 14 14 90 0 1 -14 14 H 355 a 14 14 90 0 1 -14 -14 V 274.0 H 102" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="341" y="248" width="102" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="341" y1="274" x2="443" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="348" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">round of type</text>
+</g>
+
+<!-- Association done by -->
+<line x1="1077" y1="116" x2="508" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="995" y="125.42209325736306" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="82" y1="116" x2="508" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="155" y="136.1208636038091" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-done by">
+	<path d="M 527 248 a 14 14 90 0 1 14 14 V 274 h -66 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 541 274.0 v 12 a 14 14 90 0 1 -14 14 H 489 a 14 14 90 0 1 -14 -14 V 274.0 H 66" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="475" y="248" width="66" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="475" y1="274" x2="541" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="482" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">done by</text>
+</g>
+
+<!-- Association in city -->
+<line x1="508" y1="116" x2="638" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="530.7109444760038" y="186" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="248" y1="116" x2="638" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="316" y="136.69552173372716" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-in city">
+	<path d="M 652 248 a 14 14 90 0 1 14 14 V 274 h -56 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 666 274.0 v 12 a 14 14 90 0 1 -14 14 H 624 a 14 14 90 0 1 -14 -14 V 274.0 H 56" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="610" y="248" width="56" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="610" y1="274" x2="666" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="617" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">in city</text>
+</g>
+
+<!-- Association began day -->
+<line x1="392" y1="116" x2="773" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="423" y="122.03017570644701" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="248" y1="116" x2="773" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="316" y="129.297740015433" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-began day">
+	<path d="M 799 248 a 14 14 90 0 1 14 14 V 274 h -80 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 813 274.0 v 12 a 14 14 90 0 1 -14 14 H 747 a 14 14 90 0 1 -14 -14 V 274.0 H 80" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="733" y="248" width="80" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="733" y1="274" x2="813" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="740" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">began day</text>
+</g>
+
+<!-- Association ended day -->
+<line x1="392" y1="116" x2="925" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="423" y="118.00856700227547" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="248" y1="116" x2="925" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="316" y="124.49520790586064" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-ended day">
+	<path d="M 952 248 a 14 14 90 0 1 14 14 V 274 h -82 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 966 274.0 v 12 a 14 14 90 0 1 -14 14 H 898 a 14 14 90 0 1 -14 -14 V 274.0 H 82" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="884" y="248" width="82" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="884" y1="274" x2="966" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="891" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">ended day</text>
+</g>
+
+<!-- Association in country -->
+<line x1="638" y1="116" x2="1077" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="691" y="128.08796704629455" fill="#000000" font-family="Verdana" font-size="12">0,N</text>
+<line x1="508" y1="116" x2="1077" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="563" y="124.03369255437536" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-in country">
+	<path d="M 1103 248 a 14 14 90 0 1 14 14 V 274 h -80 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 1117 274.0 v 12 a 14 14 90 0 1 -14 14 H 1051 a 14 14 90 0 1 -14 -14 V 274.0 H 80" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="1037" y="248" width="80" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="1037" y1="274" x2="1117" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="1044" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">in country</text>
+</g>
+
+<!-- Association in continent -->
+<line x1="773" y1="116" x2="1206" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="833" y="130.9215505116682" fill="#000000" font-family="Verdana" font-size="12">0,N</text>
+<line x1="638" y1="116" x2="1206" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="691" y="123.50574925098309" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-in continent">
+	<path d="M 1239 248 a 14 14 90 0 1 14 14 V 274 h -94 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 1253 274.0 v 12 a 14 14 90 0 1 -14 14 H 1173 a 14 14 90 0 1 -14 -14 V 274.0 H 94" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="1159" y="248" width="94" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="1159" y1="274" x2="1253" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="1166" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">in continent</text>
+</g>
+
+<!-- Association is a championship of competition -->
+<line x1="248" y1="116" x2="1399" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="316" y="117.67545841621741" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="925" y1="116" x2="1399" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="995" y="132.26557359965653" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-is a championship of competition">
+	<path d="M 1499 248 a 14 14 90 0 1 14 14 V 274 h -228 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 1513 274.0 v 12 a 14 14 90 0 1 -14 14 H 1299 a 14 14 90 0 1 -14 -14 V 274.0 H 228" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="1285" y="248" width="228" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="1285" y1="274" x2="1513" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="1292" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">is a championship of competition</text>
+</g>
+
+<!-- Association from country -->
+<line x1="638" y1="116" x2="1595" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="691" y="117.1710327065141" fill="#000000" font-family="Verdana" font-size="12">0,N</text>
+<line x1="1077" y1="116" x2="1595" y2="274" stroke="#000000" stroke-width="1"/>
+<text x="1137" y="127.14664691149127" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-from country">
+	<path d="M 1631 248 a 14 14 90 0 1 14 14 V 274 h -100 V 262 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 1645 274.0 v 12 a 14 14 90 0 1 -14 14 H 1559 a 14 14 90 0 1 -14 -14 V 274.0 H 100" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="1545" y="248" width="100" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="1545" y1="274" x2="1645" y2="274" stroke="#000000" stroke-width="1"/>
+	<text x="1552" y="266.6" fill="#000000" font-family="Trebuchet MS" font-size="14">from country</text>
+</g>
+
+<!-- Entity Result -->
+<g id="entity-Result">
+	<g id="frame-Result">
+		<rect x="14" y="9" width="136" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="14" y="35.0" width="136" height="188" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="14" y="9" width="136" height="214" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="14" y1="35" x2="150" y2="35" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="61" y="27.599999999999994" fill="#000000" font-family="Trebuchet MS" font-size="14">Result</text>
+	<text x="19" y="53.6" fill="#000000" font-family="Trebuchet MS" font-size="14">resultId</text>
+	<line x1="19" y1="56.0" x2="69" y2="56.0" stroke="#000000" stroke-width="1"/>
+	<text x="19" y="71.6" fill="#000000" font-family="Trebuchet MS" font-size="14">best</text>
+	<text x="19" y="89.6" fill="#000000" font-family="Trebuchet MS" font-size="14">average</text>
+	<text x="19" y="107.6" fill="#000000" font-family="Trebuchet MS" font-size="14">time1</text>
+	<text x="19" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">time2</text>
+	<text x="19" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">time3</text>
+	<text x="19" y="161.6" fill="#000000" font-family="Trebuchet MS" font-size="14">time4</text>
+	<text x="19" y="179.6" fill="#000000" font-family="Trebuchet MS" font-size="14">time5</text>
+	<text x="19" y="197.6" fill="#000000" font-family="Trebuchet MS" font-size="14">recordSingleType</text>
+	<text x="19" y="215.6" fill="#000000" font-family="Trebuchet MS" font-size="14">recordAverageType</text>
+</g>
+
+<!-- Entity Competition -->
+<g id="entity-Competition">
+	<g id="frame-Competition">
+		<rect x="185" y="72" width="126" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="185" y="98.0" width="126" height="62" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="185" y="72" width="126" height="88" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="185" y1="98" x2="311" y2="98" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="208" y="90.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Competition</text>
+	<text x="190" y="116.6" fill="#000000" font-family="Trebuchet MS" font-size="14">competitionId</text>
+	<line x1="190" y1="119.0" x2="281" y2="119.0" stroke="#000000" stroke-width="1"/>
+	<text x="190" y="134.6" fill="#000000" font-family="Trebuchet MS" font-size="14">competitionName</text>
+	<text x="190" y="152.6" fill="#000000" font-family="Trebuchet MS" font-size="14">venue</text>
+</g>
+
+<!-- Entity Date -->
+<g id="entity-Date">
+	<g id="frame-Date">
+		<rect x="366" y="81" width="52" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="366" y="107.0" width="52" height="44" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="366" y="81" width="52" height="70" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="366" y1="107" x2="418" y2="107" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="376" y="99.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Date</text>
+	<text x="371" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">dateId</text>
+	<line x1="371" y1="128.0" x2="413" y2="128.0" stroke="#000000" stroke-width="1"/>
+	<text x="371" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">date</text>
+</g>
+
+<!-- Entity City -->
+<g id="entity-City">
+	<g id="frame-City">
+		<rect x="458" y="63" width="100" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="458" y="89.0" width="100" height="80" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="458" y="63" width="100" height="106" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="458" y1="89" x2="558" y2="89" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="495" y="81.6" fill="#000000" font-family="Trebuchet MS" font-size="14">City</text>
+	<text x="463" y="107.6" fill="#000000" font-family="Trebuchet MS" font-size="14">cityId</text>
+	<line x1="463" y1="110.0" x2="500" y2="110.0" stroke="#000000" stroke-width="1"/>
+	<text x="463" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">cityName</text>
+	<text x="463" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">cityLongitude</text>
+	<text x="463" y="161.6" fill="#000000" font-family="Trebuchet MS" font-size="14">cityLatitude</text>
+</g>
+
+<!-- Entity Country -->
+<g id="entity-Country">
+	<g id="frame-Country">
+		<rect x="590" y="72" width="96" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="590" y="98.0" width="96" height="62" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="590" y="72" width="96" height="88" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="590" y1="98" x2="686" y2="98" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="612" y="90.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Country</text>
+	<text x="595" y="116.6" fill="#000000" font-family="Trebuchet MS" font-size="14">countryId</text>
+	<line x1="595" y1="119.0" x2="657" y2="119.0" stroke="#000000" stroke-width="1"/>
+	<text x="595" y="134.6" fill="#000000" font-family="Trebuchet MS" font-size="14">countryName</text>
+	<text x="595" y="152.6" fill="#000000" font-family="Trebuchet MS" font-size="14">iso2</text>
+</g>
+
+<!-- Entity Continent -->
+<g id="entity-Continent">
+	<g id="frame-Continent">
+		<rect x="718" y="72" width="110" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="718" y="98.0" width="110" height="62" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="718" y="72" width="110" height="88" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="718" y1="98" x2="828" y2="98" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="741" y="90.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Continent</text>
+	<text x="723" y="116.6" fill="#000000" font-family="Trebuchet MS" font-size="14">continentId</text>
+	<line x1="723" y1="119.0" x2="798" y2="119.0" stroke="#000000" stroke-width="1"/>
+	<text x="723" y="134.6" fill="#000000" font-family="Trebuchet MS" font-size="14">continentName</text>
+	<text x="723" y="152.6" fill="#000000" font-family="Trebuchet MS" font-size="14">recordName</text>
+</g>
+
+<!-- Entity Championship -->
+<g id="entity-Championship">
+	<g id="frame-Championship">
+		<rect x="860" y="81" width="130" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="860" y="107.0" width="130" height="44" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="860" y="81" width="130" height="70" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="860" y1="107" x2="990" y2="107" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="880" y="99.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Championship</text>
+	<text x="865" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">championshipId</text>
+	<line x1="865" y1="128.0" x2="966" y2="128.0" stroke="#000000" stroke-width="1"/>
+	<text x="865" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">championshipType</text>
+</g>
+
+<!-- Entity Person -->
+<g id="entity-Person">
+	<g id="frame-Person">
+		<rect x="1022" y="63" width="110" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="1022" y="89.0" width="110" height="80" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="1022" y="63" width="110" height="106" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="1022" y1="89" x2="1132" y2="89" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="1055" y="81.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Person</text>
+	<text x="1027" y="107.6" fill="#000000" font-family="Trebuchet MS" font-size="14">personId</text>
+	<line x1="1027" y1="110.0" x2="1083" y2="110.0" stroke="#000000" stroke-width="1"/>
+	<text x="1027" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">personName</text>
+	<text x="1027" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">personSurname</text>
+	<text x="1027" y="161.6" fill="#000000" font-family="Trebuchet MS" font-size="14">gender</text>
+</g>
+
+<!-- Entity Event -->
+<g id="entity-Event">
+	<g id="frame-Event">
+		<rect x="1164" y="81" width="84" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="1164" y="107.0" width="84" height="44" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="1164" y="81" width="84" height="70" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="1164" y1="107" x2="1248" y2="107" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="1187" y="99.6" fill="#000000" font-family="Trebuchet MS" font-size="14">Event</text>
+	<text x="1169" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">eventId</text>
+	<line x1="1169" y1="128.0" x2="1218" y2="128.0" stroke="#000000" stroke-width="1"/>
+	<text x="1169" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">eventName</text>
+</g>
+
+<!-- Entity RoundType -->
+<g id="entity-RoundType">
+	<g id="frame-RoundType">
+		<rect x="1341" y="81" width="116" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="1341" y="107.0" width="116" height="44" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="1341" y="81" width="116" height="70" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="1341" y1="107" x2="1457" y2="107" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="1363" y="99.6" fill="#000000" font-family="Trebuchet MS" font-size="14">RoundType</text>
+	<text x="1346" y="125.6" fill="#000000" font-family="Trebuchet MS" font-size="14">roundTypeId</text>
+	<line x1="1346" y1="128.0" x2="1427" y2="128.0" stroke="#000000" stroke-width="1"/>
+	<text x="1346" y="143.6" fill="#000000" font-family="Trebuchet MS" font-size="14">roundTypeName</text>
+</g>
+</svg>

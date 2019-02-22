@@ -1,0 +1,22 @@
+Result: resultId, best, average, time1, time2, time3, time4, time5, recordSingleType, recordAverageType
+Competition: competitionId, competitionName, venue
+Date: dateId, date
+City: cityId, cityName, cityLongitude, cityLatitude
+Country: countryId, countryName, iso2
+Continent: continentId, continentName, recordName
+Championship: championshipId, championshipType
+Person: personId, personName, personSurname, gender
+Event: eventId, eventName
+RoundType: roundTypeId, roundTypeName
+
+done in competition, 1N Competition, 11 Result
+done with rubiks, 1N Event, 11 Result
+round of type, 1N RoundType, 11 Result
+done by, 1N Person, 11 Result
+in city, 1N City, 11 Competition
+began day, 1N Date, 11 Competition
+ended day, 1N Date, 11 Competition
+in country, 0N Country, 11 City
+in continent, 0N Continent, 11 Country
+is a championship of competition, 1N Competition, 11 Championship
+from country, 0N Country, 11 Person

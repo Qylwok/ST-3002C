@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>PEUT VIVRE DANS</span> (
+    <span class='foreign primary'>code espèce</span>,
+    <span class='foreign primary'>num. enclos</span>,
+    <span class='normal'>nb. max. congénères</span>
+  )
+</div>
+<!--
+<div>
+  <span class='relation'>ENCLOS</span> (
+    <span class='primary'>num. enclos</span>
+  )
+</div>
+-->
+<div>
+  <span class='relation'>OCCUPE</span> (
+    <span class='foreign primary'>code espèce</span>,
+    <span class='foreign primary'>nom</span>,
+    <span class='foreign primary'>date début</span>,
+    <span class='foreign primary'>date fin</span>,
+    <span class='foreign primary'>num. enclos</span>
+  )
+</div>
+<div>
+  <span class='relation'>PÉRIODE</span> (
+    <span class='primary'>date début</span>,
+    <span class='primary'>date fin</span>
+  )
+</div>
+<div>
+  <span class='relation'>ESPÈCE</span> (
+    <span class='primary'>code espèce</span>,
+    <span class='normal'>libellé</span>
+  )
+</div>
+<div>
+  <span class='relation'>ANIMAL</span> (
+    <span class='foreign primary'>code espèce</span>,
+    <span class='primary'>nom</span>,
+    <span class='normal'>sexe</span>,
+    <span class='normal'>date naissance</span>,
+    <span class='normal'>date décès</span>,
+    <span class='foreign'>code espèce mère</span>,
+    <span class='foreign'>nom mère</span>
+  )
+</div>
+<div>
+  <span class='relation'>PEUT COHABITER AVEC</span> (
+    <span class='foreign primary'>code espèce</span>,
+    <span class='foreign primary'>code espèce commensale</span>,
+    <span class='normal'>nb. max. commensaux</span>
+  )
+</div>
+<div>
+  <span class='relation'>A PÈRE</span> (
+    <span class='foreign primary'>code espèce</span>,
+    <span class='foreign primary'>nom</span>,
+    <span class='foreign primary'>code espèce père présumé</span>,
+    <span class='foreign primary'>nom père présumé</span>
+  )
+</div>
+</div>
+</body>
+</html>

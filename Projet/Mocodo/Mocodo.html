@@ -1,0 +1,101 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>Result</span> (
+    <span class='primary'>resultId</span>,
+    <span class='normal'>best</span>,
+    <span class='normal'>average</span>,
+    <span class='normal'>time1</span>,
+    <span class='normal'>time2</span>,
+    <span class='normal'>time3</span>,
+    <span class='normal'>time4</span>,
+    <span class='normal'>time5</span>,
+    <span class='normal'>recordSingleType</span>,
+    <span class='normal'>recordAverageType</span>,
+    <span class='foreign'>competitionId</span>,
+    <span class='foreign'>eventId</span>,
+    <span class='foreign'>roundTypeId</span>,
+    <span class='foreign'>personId</span>
+  )
+</div>
+<div>
+  <span class='relation'>Competition</span> (
+    <span class='primary'>competitionId</span>,
+    <span class='normal'>competitionName</span>,
+    <span class='normal'>venue</span>,
+    <span class='foreign'>cityId</span>,
+    <span class='foreign'>dateId</span>,
+    <span class='foreign'>dateId.1</span>
+  )
+</div>
+<div>
+  <span class='relation'>Date</span> (
+    <span class='primary'>dateId</span>,
+    <span class='normal'>date</span>
+  )
+</div>
+<div>
+  <span class='relation'>City</span> (
+    <span class='primary'>cityId</span>,
+    <span class='normal'>cityName</span>,
+    <span class='normal'>cityLongitude</span>,
+    <span class='normal'>cityLatitude</span>,
+    <span class='foreign'>countryId</span>
+  )
+</div>
+<div>
+  <span class='relation'>Country</span> (
+    <span class='primary'>countryId</span>,
+    <span class='normal'>countryName</span>,
+    <span class='normal'>iso2</span>,
+    <span class='foreign'>continentId</span>
+  )
+</div>
+<div>
+  <span class='relation'>Continent</span> (
+    <span class='primary'>continentId</span>,
+    <span class='normal'>continentName</span>,
+    <span class='normal'>recordName</span>
+  )
+</div>
+<div>
+  <span class='relation'>Championship</span> (
+    <span class='primary'>championshipId</span>,
+    <span class='normal'>championshipType</span>,
+    <span class='foreign'>competitionId</span>
+  )
+</div>
+<div>
+  <span class='relation'>Person</span> (
+    <span class='primary'>personId</span>,
+    <span class='normal'>personName</span>,
+    <span class='normal'>personSurname</span>,
+    <span class='normal'>gender</span>,
+    <span class='foreign'>countryId</span>
+  )
+</div>
+<div>
+  <span class='relation'>Event</span> (
+    <span class='primary'>eventId</span>,
+    <span class='normal'>eventName</span>
+  )
+</div>
+<div>
+  <span class='relation'>RoundType</span> (
+    <span class='primary'>roundTypeId</span>,
+    <span class='normal'>roundTypeName</span>
+  )
+</div>
+</div>
+</body>
+</html>

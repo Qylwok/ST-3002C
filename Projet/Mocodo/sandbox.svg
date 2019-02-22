@@ -1,0 +1,173 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="520" height="296" view_box="0 0 520 296"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 21 Feb 2019 19:35:54</desc>
+
+<rect id="frame" x="0" y="0" width="520" height="296" fill="none" stroke="none" stroke-width="0"/>
+
+<!-- Association PEUT VIVRE DANS -->
+<line x1="91" y1="157" x2="91" y2="44" stroke="#000000" stroke-width="1"/>
+<text x="96.0" y="114" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="243" y1="44" x2="91" y2="44" stroke="#000000" stroke-width="1"/>
+<text x="171" y="61.0" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-PEUT VIVRE DANS">
+	<path d="M 152 18 a 14 14 90 0 1 14 14 V 44 h -150 V 32 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 166 44.0 v 12 a 14 14 90 0 1 -14 14 H 30 a 14 14 90 0 1 -14 -14 V 44.0 H 150" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="16" y="18" width="150" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="16" y1="44" x2="166" y2="44" stroke="#000000" stroke-width="1"/>
+	<text x="34" y="36.6" fill="#000000" font-family="Trebuchet MS" font-size="14">PEUT VIVRE DANS</text>
+	<text x="23" y="62.6" fill="#000000" font-family="Trebuchet MS" font-size="14">nb. max. congénères</text>
+</g>
+
+<!-- Association OCCUPE -->
+<line x1="354" y1="157" x2="354" y2="44" stroke="#000000" stroke-width="1"/>
+<text x="359.0" y="96" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="470" y1="44" x2="354" y2="44" stroke="#000000" stroke-width="1"/>
+<text x="402" y="61.0" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<line x1="243" y1="44" x2="354" y2="44" stroke="#000000" stroke-width="1"/>
+<text x="293" y="61.0" fill="#000000" font-family="Verdana" font-size="12">1,N</text>
+<g id="association-OCCUPE">
+	<path d="M 374 18 a 14 14 90 0 1 14 14 V 44 h -68 V 32 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 388 44.0 v 12 a 14 14 90 0 1 -14 14 H 334 a 14 14 90 0 1 -14 -14 V 44.0 H 68" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="320" y="18" width="68" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="320" y1="44" x2="388" y2="44" stroke="#000000" stroke-width="1"/>
+	<text x="327" y="36.6" fill="#000000" font-family="Trebuchet MS" font-size="14">OCCUPE</text>
+</g>
+
+<!-- Association DF -->
+<line x1="91" y1="157" x2="243" y2="157" stroke="#000000" stroke-width="1"/>
+<text x="141" y="174.0" fill="#000000" font-family="Verdana" font-size="12">0,N</text>
+<line x1="354" y1="157" x2="243" y2="157" stroke="#000000" stroke-width="1"/>
+<text x="275" y="174.0" fill="#000000" font-family="Verdana" font-size="12">1,1</text>
+<line x1="275" y1="176.0" x2="296" y2="176.0" stroke="#000000" stroke-width="1"/>
+<g id="association-DF">
+	<circle cx="243" cy="157" r="16" stroke="#000000" stroke-width="1.5" fill="#FFFFFF"/>
+	<text x="234" y="160.4" fill="#000000" font-family="Trebuchet MS" font-size="14">DF</text>
+</g>
+
+<!-- Association A MÈRE -->
+<path d="M354 157 C 406.6666666666667 123.66666666666666 445.3333333333333 123.66666666666666 470 157" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="412" y="151.0" fill="#000000" font-family="Verdana" font-size="12">0,1</text>
+<path d="M354 157 C 407.3333333333333 190.33333333333334 446.0 190.33333333333334 470 157" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="412" y="172.0" fill="#000000" font-family="Verdana" font-size="12" onmouseover="show(evt,'mère')" onmouseout="hide(evt)" style="cursor: pointer;">0,N</text>
+<path d="M 406.99678905308247 180.2731755822897 L 419.9606737035432 176.81807865607348 L 414.83222004698587 181.88749312843058 L 417.5391973843318 188.57122514692853 Z" fill="#000000" stroke-width="0"/>
+<g id="association-A MÈRE">
+	<path d="M 487 131 a 14 14 90 0 1 14 14 V 157 h -62 V 145 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 501 157.0 v 12 a 14 14 90 0 1 -14 14 H 453 a 14 14 90 0 1 -14 -14 V 157.0 H 62" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="439" y="131" width="62" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="439" y1="157" x2="501" y2="157" stroke="#000000" stroke-width="1"/>
+	<text x="446" y="149.6" fill="#000000" font-family="Trebuchet MS" font-size="14">A MÈRE</text>
+</g>
+
+<!-- Association PEUT COHABITER AVEC -->
+<path d="M91 157 C 133.66666666666666 185.66666666666666 133.66666666666666 220.33333333333334 91 261" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="94.0" y="209" fill="#000000" font-family="Verdana" font-size="12">0,N</text>
+<path d="M91 157 C 48.333333333333336 185.66666666666666 48.333333333333336 220.33333333333334 91 261" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="66.0" y="209" fill="#000000" font-family="Verdana" font-size="12" onmouseover="show(evt,'commensale')" onmouseout="hide(evt)" style="cursor: pointer;">0,N</text>
+<g id="association-PEUT COHABITER AVEC">
+	<path d="M 159 235 a 14 14 90 0 1 14 14 V 261 h -164 V 249 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 173 261.0 v 12 a 14 14 90 0 1 -14 14 H 23 a 14 14 90 0 1 -14 -14 V 261.0 H 164" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="9" y="235" width="164" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="9" y1="261" x2="173" y2="261" stroke="#000000" stroke-width="1"/>
+	<text x="16" y="253.6" fill="#000000" font-family="Trebuchet MS" font-size="14">PEUT COHABITER AVEC</text>
+	<text x="16" y="279.6" fill="#000000" font-family="Trebuchet MS" font-size="14">nb. max. commensaux</text>
+</g>
+
+<!-- Association A PÈRE -->
+<path d="M354 157 C 396.6666666666667 209.66666666666666 396.6666666666667 244.33333333333334 354 261" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="357.0" y="227" fill="#000000" font-family="Verdana" font-size="12">0,N</text>
+<path d="M354 157 C 311.3333333333333 209.66666666666666 311.3333333333333 244.33333333333334 354 261" fill="none" stroke="#000000" stroke-width="1"/>
+<text x="329.0" y="227" fill="#000000" font-family="Verdana" font-size="12" onmouseover="show(evt,'père présumé')" onmouseout="hide(evt)" style="cursor: pointer;">0,N</text>
+<path d="M 323.6478924751282 210.0045023933053 L 326.5600867566222 223.10103340219592 L 321.70865448955414 217.76590407311204 L 314.9179842369121 220.1921764238349 Z" fill="#000000" stroke-width="0"/>
+<g id="association-A PÈRE">
+	<path d="M 370 235 a 14 14 90 0 1 14 14 V 261 h -60 V 249 a 14 14 90 0 1 14 -14" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<path d="M 384 261.0 v 12 a 14 14 90 0 1 -14 14 H 338 a 14 14 90 0 1 -14 -14 V 261.0 H 60" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+	<rect x="324" y="235" width="60" height="52" fill="none" rx="14" stroke="#000000" stroke-width="1.5"/>
+	<line x1="324" y1="261" x2="384" y2="261" stroke="#000000" stroke-width="1"/>
+	<text x="331" y="253.6" fill="#000000" font-family="Trebuchet MS" font-size="14">A PÈRE</text>
+</g>
+
+<!-- Entity ENCLOS -->
+<g id="entity-ENCLOS">
+	<g id="frame-ENCLOS">
+		<rect x="198" y="18" width="90" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="198" y="44.0" width="90" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="198" y="18" width="90" height="52" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="198" y1="44" x2="288" y2="44" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="218" y="36.6" fill="#000000" font-family="Trebuchet MS" font-size="14">ENCLOS</text>
+	<text x="203" y="62.6" fill="#000000" font-family="Trebuchet MS" font-size="14">num. enclos</text>
+	<line x1="203" y1="65.0" x2="282" y2="65.0" stroke="#000000" stroke-width="1"/>
+</g>
+
+<!-- Entity PÉRIODE -->
+<g id="entity-PÉRIODE">
+	<g id="frame-PÉRIODE">
+		<rect x="429" y="9" width="82" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="429" y="35.0" width="82" height="44" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="429" y="9" width="82" height="70" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="429" y1="35" x2="511" y2="35" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="442" y="27.6" fill="#000000" font-family="Trebuchet MS" font-size="14">PÉRIODE</text>
+	<text x="434" y="53.6" fill="#000000" font-family="Trebuchet MS" font-size="14">date début</text>
+	<line x1="434" y1="56.0" x2="506" y2="56.0" stroke="#000000" stroke-width="1"/>
+	<text x="434" y="71.6" fill="#000000" font-family="Trebuchet MS" font-size="14">date fin</text>
+	<line x1="434" y1="74.0" x2="486" y2="74.0" stroke="#000000" stroke-width="1"/>
+</g>
+
+<!-- Entity ESPÈCE -->
+<g id="entity-ESPÈCE">
+	<g id="frame-ESPÈCE">
+		<rect x="46" y="122" width="90" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="46" y="148.0" width="90" height="44" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="46" y="122" width="90" height="70" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="46" y1="148" x2="136" y2="148" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="67" y="140.6" fill="#000000" font-family="Trebuchet MS" font-size="14">ESPÈCE</text>
+	<text x="51" y="166.6" fill="#000000" font-family="Trebuchet MS" font-size="14">code espèce</text>
+	<line x1="51" y1="169.0" x2="131" y2="169.0" stroke="#000000" stroke-width="1"/>
+	<text x="51" y="184.6" fill="#000000" font-family="Trebuchet MS" font-size="14">libellé</text>
+</g>
+
+<!-- Entity ANIMAL -->
+<g id="entity-ANIMAL">
+	<g id="frame-ANIMAL">
+		<rect x="301" y="104" width="106" height="26" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="301" y="130.0" width="106" height="80" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0"/>
+		<rect x="301" y="104" width="106" height="106" fill="none" stroke="#000000" stroke-width="1.5"/>
+		<line x1="301" y1="130" x2="407" y2="130" stroke="#000000" stroke-width="1"/>
+	</g>
+	<text x="329" y="122.6" fill="#000000" font-family="Trebuchet MS" font-size="14">ANIMAL</text>
+	<text x="306" y="148.6" fill="#000000" font-family="Trebuchet MS" font-size="14">nom</text>
+	<line x1="306" y1="151.0" x2="334" y2="151.0" style="fill:none;stroke:#000000;stroke-width:1;stroke-dasharray:4;"/>
+	<text x="306" y="166.6" fill="#000000" font-family="Trebuchet MS" font-size="14">sexe</text>
+	<text x="306" y="184.6" fill="#000000" font-family="Trebuchet MS" font-size="14">date naissance</text>
+	<text x="306" y="202.6" fill="#000000" font-family="Trebuchet MS" font-size="14">date décès</text>
+</g>
+
+<!-- Annotations -->
+<script type="text/ecmascript">
+<![CDATA[
+	function show(evt, text) {
+		var pos = (evt.target.getAttribute("y") < 251) ? "bottom" : "top"
+		var annotation = document.getElementById(pos + "_annotation_2es6o3ED")
+		annotation.textContent = text
+		annotation.setAttributeNS(null, "visibility", "visible");
+		document.getElementById(pos + "_overlay_2es6o3ED").setAttributeNS(null, "visibility", "visible");
+	}
+	function hide(evt) {
+		document.getElementById("top_annotation_2es6o3ED").setAttributeNS(null, "visibility", "hidden");
+		document.getElementById("top_overlay_2es6o3ED").setAttributeNS(null, "visibility", "hidden");
+		document.getElementById("bottom_annotation_2es6o3ED").setAttributeNS(null, "visibility", "hidden");
+		document.getElementById("bottom_overlay_2es6o3ED").setAttributeNS(null, "visibility", "hidden");
+	}
+]]>
+</script>
+<rect id="top_overlay_2es6o3ED" x="0" y="0" width="520" height="40" fill="#000000" stroke-width="0" opacity="0.7" visibility="hidden"/>
+<text id="top_annotation_2es6o3ED" text-anchor="middle" x="260.0" y="24" fill="#FFFFFF" font-family="Trebuchet MS" font-size="14" visibility="hidden"></text>
+<rect id="bottom_overlay_2es6o3ED" x="0" y="256" width="520" height="40" fill="#000000" stroke-width="0" opacity="0.7" visibility="hidden"/>
+<text id="bottom_annotation_2es6o3ED" text-anchor="middle" x="260.0" y="280" fill="#FFFFFF" font-family="Trebuchet MS" font-size="14" visibility="hidden"></text>
+</svg>

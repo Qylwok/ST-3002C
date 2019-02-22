@@ -1,0 +1,74 @@
+Results : 
+    competitionId, eventId, roundTypeId, best, average, personId, personCountryId, value1, value2, value3, value4, value5, regionalSingleRecord, regionalAverageRecord
+
+Persons :
+    id, (subId on garde pas (on garde que les 1)), name (à séparer en nom et prénom), countryId, gender
+
+(Scrambles : on prend pas à priori)
+
+Competitions :
+    id, name, cityName, countryId, year, month, day, endMonth, endDay, (venue), latitude, longitude
+
+Championship : 
+    id, competition_id, championship_type 
+
+Country : 
+    id, name, recordName, iso2
+
+Continent : 
+    id, name, continentId
+
+Eligible[...] : 
+    id, championship_type, eligible_country_iso2
+
+Events : 
+    id, name
+
+RoundType : 
+    id, name
+
+
+
+ENTITES : 
+    Result(         resultId, competitionId, eventId, roundTypeId, best, average, personId, value1, value2, value3, value4, value5, recordSingleType, recordAverageType
+                    PRIMARY KEY resultId
+                    FOREIGN KEY competitionId ON Competition(competitionId)
+                    FOREIGN KEY eventId ON Event(eventId)
+                    FOREIGN KEY roundTypeId ON RoundType(roundTypeId)
+                    FOREIGN KEY personId ON Person(personId))
+
+    Competition(    competitionId, competitionName, cityId, dateBeginId, dateEndId, venue
+                    PRIMARY KEY competitionId
+                    FOREIGN KEY cityId ON City(cityId)
+                    FOREIGN KEY dateBeginId ON Date(dateId)
+                    FOREIGN KEY dateEndId ON Date(dateId)) 
+
+-    Date(           dateId, date
+                    PRIMARY KEY dateId)
+
+    City(           cityId, cityName, countryId, cityLongitude, cityLatitude
+                    PRIMARY KEY cityId
+                    FOREIGN KEY countryId ON Country(countryId))
+
+-    Country(        countryId, countryName, continentId, iso2
+                    PRIMARY KEY countryId
+                    FOREIGN KEY continentId ON Continent(continentId))
+
+-    Continent(      continentId, recordName, continentName
+                    PRIMARY KEY continentId)
+
+-    Championship(   championshipId, competitionId, championshipType
+                    PRIMARY KEY championshipId
+                    FOREIGN KEY competitionId ON Competition(competitionId))
+
+-    Person(        personId, personName, personSurname, countryId, gender
+                    PRIMARY KEY personId
+                    FOREIGN KEY countryId ON Country(countryId))
+
+-    Event(         eventId, eventName
+                    PRIMARY KEY eventId)
+
+-    RoundType(      roundTypeId, roundTypeName
+                    PRIMARY KEY roundTypeId)
+
+    (on enlève Eligible et les championships ayant championshipType == greater_china)

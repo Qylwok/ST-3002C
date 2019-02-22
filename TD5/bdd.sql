@@ -1,0 +1,327 @@
+/* Réinitialisation de la base de données : suppression des tables */
+/* ATTENTION À L'ORDRE DES TABLES !!! */
+
+DROP TABLE IF EXISTS `Administration`;
+DROP TABLE IF EXISTS `Dispensation`;
+DROP TABLE IF EXISTS `Prescription`;
+DROP TABLE IF EXISTS `Medicament`;
+DROP TABLE IF EXISTS `Patient`;
+DROP TABLE IF EXISTS `Infirmier`;
+DROP TABLE IF EXISTS `Pharmacien`;
+DROP TABLE IF EXISTS `Medecin`;
+DROP TABLE IF EXISTS `Personnel_hospitalier`;
+DROP TABLE IF EXISTS `ATC5`;
+DROP TABLE IF EXISTS `ATC4`;
+DROP TABLE IF EXISTS `ATC3`;
+DROP TABLE IF EXISTS `ATC2`;
+DROP TABLE IF EXISTS `ATC1`;
+
+DROP TRIGGER IF EXISTS `chk_atc2`;
+DROP TRIGGER IF EXISTS `chk_atc3`;
+DROP TRIGGER IF EXISTS `chk_atc4`;
+DROP TRIGGER IF EXISTS `chk_atc5`;
+
+/* Création des tables */
+CREATE TABLE `ATC1`(
+	`code_ATC1` CHAR(1) NOT NULL,
+	`libelle_ATC1` VARCHAR(100) NOT NULL,
+	PRIMARY KEY(`code_ATC1`)
+);
+
+CREATE TABLE `ATC2`(
+	`code_ATC2` CHAR(3) NOT NULL,
+	`libelle_ATC2` VARCHAR(100) NOT NULL,
+	`code_ATC1` CHAR(1) NOT NULL,
+	PRIMARY KEY(`code_ATC2`),
+	FOREIGN KEY(`code_ATC1`) REFERENCES `ATC1`(`code_ATC1`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	CHECK  (STRCMP(LEFT(`code_ATC2`,1),`code_ATC1`)=0)
+);
+
+CREATE TABLE `ATC3`(
+	`code_ATC3` CHAR(4) NOT NULL,
+	`libelle_ATC3` VARCHAR(100) NOT NULL,
+	`code_ATC2` CHAR(3) NOT NULL,
+	PRIMARY KEY(`code_ATC3`),
+	FOREIGN KEY(`code_ATC2`) REFERENCES `ATC2`(`code_ATC2`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	CHECK  (STRCMP(LEFT(`code_ATC3`,3),`code_ATC2`)=0)
+);
+
+CREATE TABLE `ATC4`(
+	`code_ATC4` CHAR(5) NOT NULL,
+	`libelle_ATC4` VARCHAR(100) NOT NULL,
+	`code_ATC3` CHAR(4) NOT NULL,
+	PRIMARY KEY(`code_ATC4`),
+	FOREIGN KEY(`code_ATC3`) REFERENCES `ATC3`(`code_ATC3`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	CHECK  (STRCMP(LEFT(`code_ATC4`,4),`code_ATC3`)=0)
+);
+
+CREATE TABLE `ATC5`(
+	`code_ATC5` CHAR(7) NOT NULL,
+	`libelle_ATC5` VARCHAR(100) NOT NULL,
+	`code_ATC4` CHAR(5) NOT NULL,
+	PRIMARY KEY(`code_ATC5`),
+	FOREIGN KEY(`code_ATC4`) REFERENCES `ATC4`(`code_ATC4`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	CHECK  (STRCMP(LEFT(`code_ATC5`,5),`code_ATC4`)=0)
+);
+
+CREATE TABLE `Personnel_hospitalier`(
+	`id_personnel` VARCHAR(11) NOT NULL,
+	`nom` VARCHAR(50) NOT NULL,
+	`prenom` VARCHAR(50) NOT NULL,
+	PRIMARY KEY(`id_personnel`)
+);
+
+CREATE TABLE `Medecin`(
+	`RPPS` CHAR(11) NOT NULL,
+	`specialite` VARCHAR(50) NOT NULL,
+	PRIMARY KEY(`RPPS`),
+	FOREIGN KEY(`RPPS`) REFERENCES `Personnel_hospitalier`(`id_personnel`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+CREATE TABLE `Pharmacien`(
+	`RPPS` CHAR(11) NOT NULL,
+	PRIMARY KEY(`RPPS`),
+	FOREIGN KEY(`RPPS`) REFERENCES `Personnel_hospitalier`(`id_personnel`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+CREATE TABLE `Infirmier`(
+	`ADELI` CHAR(9) NOT NULL,
+	`type_infirmier` VARCHAR(5) NOT NULL,
+	PRIMARY KEY(`ADELI`),
+	FOREIGN KEY(`ADELI`) REFERENCES `Personnel_hospitalier`(`id_personnel`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+CREATE TABLE `Patient`(
+	`IPP` INT UNSIGNED NOT NULL,
+	`nom` VARCHAR(50) NOT NULL,
+	`prenom` VARCHAR(50) NOT NULL,
+	`sexe` ENUM("H","F") NOT NULL,
+	`date_naissance` DATE NOT NULL,
+	PRIMARY KEY(`IPP`)
+);
+
+CREATE TABLE `Medicament`(
+	`cip` CHAR(13) NOT NULL,
+	`DCI` VARCHAR(50) NOT NULL,
+	`code_ATC5` CHAR(7) NOT NULL,
+	PRIMARY KEY(`cip`),
+	FOREIGN KEY(`code_ATC5`) REFERENCES `ATC5`(`code_ATC5`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+CREATE TABLE `Prescription`(
+	`RPPS` CHAR(13)  NOT NULL,
+	`IPP` INT UNSIGNED NOT NULL,
+	`cip` CHAR(13) NOT NULL,
+	`date_heure_prescription` DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(`RPPS`,`IPP`,`cip`),
+	FOREIGN KEY(`RPPS`) REFERENCES `Medecin`(`RPPS`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	FOREIGN KEY(`IPP`) REFERENCES `Patient`(`IPP`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	FOREIGN KEY(`cip`) REFERENCES `Medicament`(`cip`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+CREATE TABLE `Dispensation`(
+	`RPPS` CHAR(13)  NOT NULL,
+	`IPP` INT UNSIGNED NOT NULL,
+	`cip` CHAR(13) NOT NULL,
+	`date_heure_dispensation` DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(`RPPS`,`IPP`,`cip`),
+	FOREIGN KEY(`RPPS`) REFERENCES `Pharmacien`(`RPPS`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	FOREIGN KEY(`IPP`) REFERENCES `Patient`(`IPP`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	FOREIGN KEY(`cip`) REFERENCES `Medicament`(`cip`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+CREATE TABLE `Administration`(
+	`id_infirmier` CHAR(13)  NOT NULL,
+	`IPP` INT UNSIGNED NOT NULL,
+	`cip` CHAR(13) NOT NULL,
+	`date_heure_administration` DATETIME NOT NULL DEFAULT NOW(),
+	PRIMARY KEY(`id_infirmier`,`IPP`,`cip`),
+	FOREIGN KEY(`id_infirmier`) REFERENCES `Infirmier`(`ADELI`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	FOREIGN KEY(`IPP`) REFERENCES `Patient`(`IPP`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION,
+	FOREIGN KEY(`cip`) REFERENCES `Medicament`(`cip`)
+	ON UPDATE CASCADE
+	ON DELETE NO ACTION
+);
+
+/* CONTRAINTES DE VALEURS SUR LA CLASSIFICATION ATC */
+
+DELIMITER //
+CREATE TRIGGER `chk_atc2` BEFORE INSERT ON `ATC2`
+FOR EACH ROW 
+BEGIN
+	IF (STRCMP(LEFT(NEW.`code_ATC2`,1),NEW.`code_ATC1`)<>0) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Le code ATC2 doit commencer par le code ATC1', MYSQL_ERRNO = 1001;
+	END IF;
+END;//
+
+CREATE TRIGGER `chk_atc3` BEFORE INSERT ON `ATC3`
+FOR EACH ROW 
+BEGIN
+	IF (STRCMP(LEFT(NEW.`code_ATC3`,3),NEW.`code_ATC2`)<>0) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Le code ATC3 doit commencer par le code ATC2', MYSQL_ERRNO = 1001;
+	END IF;
+END;//
+
+CREATE TRIGGER `chk_atc4` BEFORE INSERT ON `ATC4`
+FOR EACH ROW 
+BEGIN
+	IF (STRCMP(LEFT(NEW.`code_ATC4`,4),NEW.`code_ATC3`)<>0) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Le code ATC4 doit commencer par le code ATC3', MYSQL_ERRNO = 1001;
+	END IF;
+END;//
+
+CREATE TRIGGER `chk_atc5` BEFORE INSERT ON `ATC5`
+FOR EACH ROW 
+BEGIN
+	IF (STRCMP(LEFT(NEW.`code_ATC5`,5),NEW.`code_ATC4`)<>0) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Le code ATC5 doit commencer par le code ATC4', MYSQL_ERRNO = 1001;
+	END IF;
+END;//
+
+DELIMITER ;
+
+
+/* Alimentation des tables */
+INSERT INTO `ATC1`(`code_ATC1`,`libelle_ATC1`)
+VALUES ("C","Système cardio-vasculaire"),
+("J","Anti-infectieux (usage systémique)"),
+("N","Système nerveux");
+
+
+INSERT INTO `ATC2`(`code_ATC2`,`libelle_ATC2`,`code_ATC1`)
+VALUES ("C03","Diurétiques","C"),
+("C07","Agents bétabloquants", "C"),
+("J01","Antibactériens (usage systémique)","J"),
+("N02","Analgésiques","N");
+
+INSERT INTO `ATC3`(`code_ATC3`,`libelle_ATC3`,`code_ATC2`)
+VALUES ("C03A","Diurétiques low-ceiling, thiazidiques", "C03"),
+("C07A","Bêtabloquants","C07"),
+("J01C","Antibactériens bêta-lactamines, pénicillines","J01"),
+("J01D","Autres antibactériens bêta-lactamines","J01"),
+("J01M","Antibactériens quinolones","J01"),
+("N02B","Autres analgésiques et antipyrétiques","N02");
+
+INSERT INTO `ATC4`(`code_ATC4`,`libelle_ATC4`,`code_ATC3`)
+VALUES ("C03AA","Thiazidiques non associés","C03A"),
+("C07AB","Bêtabloquants sélectifs","C07A"),
+("J01CA","Pénicillines à spectre large","J01C"),
+("J01DD","Céphalosporines de troisième génération","J01D"),
+("J01MA","Fluoroquinolones","J01M"),
+("N02BE","Anilides","N02B");
+
+INSERT INTO `ATC5`(`code_ATC5`,`libelle_ATC5`,`code_ATC4`)
+VALUES ("C03AA03","Hydrochlorothiazide","C03AA"),
+("C07AB03","Atenolol","C07AB"),
+("J01CA04","Amoxicilline","J01CA"),
+("J01DD04","Ceftriaxone","J01DD"),
+("J01MA12","Levofloxacine","J01MA"),
+("N02BE01","Paracetamol","N02BE");
+
+INSERT INTO `Personnel_hospitalier`(`id_personnel`,`nom`,`prenom`)
+VALUES ("00000000103","GAUTIER","Simone"),
+("00000000079","VINCENT","Lucie"),
+("00000000436","MILLAU","Raymond"),
+("00000000200","PAGAILLET","Jeanne"),
+("000000525","TUCHE","Annie"),
+("000000314","VINCENT","Marc"),
+("000000897","BLAIN","Franck"),
+("000000603","GAILLARD","Sabine"),
+("00000000404","JOUVET","Isabelle"),
+("00000000405","RICHARD","Pierre"),
+("00000000903","TWIST","Jules"),
+("00000000814","BILLARD","William");
+
+INSERT INTO `Medecin`(`RPPS`,`specialite`)
+VALUES("00000000103","cardiologue"),
+("00000000079","neurologue"),
+("00000000436","ORL"),
+("00000000200","obstétricien");
+
+INSERT INTO `Infirmier`(`ADELI`,`type_infirmier`)
+VALUES("000000525","IDE"),
+("000000314","IADE"),
+("000000897","IBODE"),
+("000000603","IDE");
+
+INSERT INTO `Pharmacien`(`RPPS`)
+VALUES ("00000000404"),
+("00000000405"),
+("00000000903"),
+("00000000814");
+
+INSERT INTO `Patient`(`IPP`,`nom`,`prenom`,`sexe`,`date_naissance`)
+VALUES (123522,"GANTY","Imane","F","1978-03-14"),
+(314812,"JARSO","Marcel","H","1942-12-12"),
+(800613,"VILLERS","Antoine","H","1967-06-13"),
+(206528,"GUZON","Marie","F","1968-05-15"),
+(504813,"RATTE","Cédric","H","1985-04-26");
+
+INSERT INTO `Medicament`(`cip`,`DCI`,`code_ATC5`)
+VALUES (3400935979780,"Amoxicilline","J01CA04"),
+(3400936730472,"Paracétamol","N02BE01"),
+(3400939584133,"Levofloxacine","J01MA12"),
+(3400949485529,"Atenolol","C07AB03"),
+(3400937196604,"Thiazidique","C03AA03"),
+(3400935744869,"Ceftriaxone","J01DD04");
+
+INSERT INTO `Prescription`(`RPPS`,`IPP`,`cip`)
+VALUES ("00000000103",800613,3400936730472),
+("00000000200",504813,3400935744869),
+("00000000103",800613,3400935979780),
+("00000000079",123522,3400935744869),
+("00000000436",314812,3400936730472),
+("00000000436",314812,3400937196604);
+
+INSERT INTO `Dispensation`(`RPPS`,`IPP`,`cip`)
+VALUES ("00000000404",800613,3400936730472),
+("00000000903",504813,3400935744869),
+("00000000814",800613,3400935979780),
+("00000000814",123522,3400935744869),
+("00000000404",314812,3400936730472),
+("00000000405",314812,3400937196604);
+
+INSERT INTO `Administration`(`id_infirmier`,`IPP`,`cip`)
+VALUES ("000000525",800613,3400936730472),
+("000000314",504813,3400935744869),
+("000000603",800613,3400935979780),
+("000000897",123522,3400935744869),
+("000000525",314812,3400936730472),
+("000000603",314812,3400937196604);
+	
