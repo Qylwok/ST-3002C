@@ -1,77 +1,116 @@
-CREATE TABLE Result(         UNSIGNED INT resultId NOT NULL AUTO_INCREMENT, 
-VARCHAR(32) competitionId NOT NULL, 
-VARCHAR(8) eventId NOT NULL, 
-CHAR(1) roundTypeId NOT NULL, 
-INT best NOT NULL, 
-INT average NOT NULL, 
-VARCHAR(16)personId NOT NULL, 
-INT value1 NOT NULL, 
-INT value2 NOT NULL, 
-INT value3 NOT NULL, 
-INT value4 NOT NULL, 
-INT value5 NOT NULL, 
-VARCHAR(32) recordSingleType, 
-VARCHAR(32) recordAverageType
-                    PRIMARY KEY resultId,
-                    FOREIGN KEY competitionId REFERENCES Competition(competitionId),
-                    FOREIGN KEY eventId REFERENCES Event(eventId),
-                    FOREIGN KEY roundTypeId REFERENCES RoundType(roundTypeId),
-                    FOREIGN KEY personId REFERENCES Person(personId));
-
-CREATE TABLE Competition(    VARCHAR(64) competitionId NOT NULL, 
-VARCHAR(256) competitionName NOT NULL, 
-UNSIGNED INT cityId NOT NULL AUTO_INCREMENT, 
-DATE dateBeginId NOT NULL, 
-DATE dateEndId NOT NULL, 
-VARCHAR(256) venue,
-                    PRIMARY KEY competitionId,
-                    FOREIGN KEY cityId REFERENCES City(cityId),
-                    FOREIGN KEY dateBeginId REFERENCES Date(dateId),
-                    FOREIGN KEY dateEndId REFERENCES Date(dateId));
-
-CREATE TABLE Date(           UNSIGNED INT dateId NOT NULL AUTO_INCREMENT, 
-DATE date NOT NULL,
-                    PRIMARY KEY dateId);
-
-CREATE TABLE City(           UNSIGNED INT cityId NOT NULL AUTO_INCREMENT, 
-VARCHAR(256) cityName NOT NULL, 
-VARCHAR(64) countryId NOT NULL, 
-INT cityLongitude NOT NULL, 
-INT cityLatitude NOT NULL,
-                    PRIMARY KEY cityId,
-                    FOREIGN KEY countryId REFERENCES Country(countryId));
+CREATE TABLE IF NOT EXISTS Result(
+     resultId INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+     competitionId VARCHAR(32) NOT NULL, 
+     eventId VARCHAR(8) NOT NULL, 
+     roundTypeId CHAR(1) NOT NULL, 
+     best INT NOT NULL, 
+     average INT NOT NULL, 
+     personId VARCHAR(16) NOT NULL, 
+     time1 INT NOT NULL, 
+     time2 INT NOT NULL, 
+     time3 INT NOT NULL, 
+     time4 INT NOT NULL, 
+     time5 INT NOT NULL, 
+     recordSingleType VARCHAR(32), 
+     recordAverageType VARCHAR(32),
+     PRIMARY KEY (resultId)
+);
 
 
-CREATE TABLE Country(        VARCHAR(64) countryId NOT NULL, 
-VARCHAR(64) countryName NOT NULL, 
-VARCHAR(32) continentId NOT NULL, 
-VARCHAR(32) iso2 NOT NULL,
-                    PRIMARY KEY countryId,
-                    FOREIGN KEY continentId REFERENCES Continent(continentId));
+CREATE TABLE IF NOT EXISTS Competition(
+     competitionId VARCHAR(64) NOT NULL, 
+     competitionName VARCHAR(256) NOT NULL, 
+     cityId INT UNSIGNED NOT NULL, 
+     dateBeginId INT UNSIGNED NOT NULL, 
+     dateEndId INT UNSIGNED NOT NULL, 
+     venue VARCHAR(256),
+     PRIMARY KEY (competitionId)
+);
 
-CREATE TABLE Continent(      VARCHAR(32) continentId NOT NULL, 
-VARCHAR(4) recordName NOT NULL, 
-VARCHAR(32) continentName NOT NULL,
-                    PRIMARY KEY continentId);
+CREATE TABLE IF NOT EXISTS Date_comp(
+     dateId INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+     dateComp DATE NOT NULL,
+     PRIMARY KEY (dateId)
+);
 
-CREATE TABLE Championship(   UNSIGNED INT championshipId NOT NULL AUTO_INCREMENT, 
-VARCHAR(64) competitionId NOT NULL, 
-VARCHAR(32) championshipType,
-                    PRIMARY KEY championshipId,
-                    FOREIGN KEY competitionId REFERENCES Competition(competitionId));
+CREATE TABLE IF NOT EXISTS City(
+     cityId INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+     cityName VARCHAR(256) NOT NULL, 
+     countryId VARCHAR(64) NOT NULL, 
+     cityLongitude INT NOT NULL, 
+     cityLatitude INT NOT NULL,
+     PRIMARY KEY (cityId)
+);
 
-CREATE TABLE Person(        VARCHAR(10) personId NOT NULL, 
-VARCHAR(64) personName NOT NULL, 
-VARCHAR(64) personSurname NOT NULL, 
-VARCHAR(64) countryId NOT NULL, 
-CHAR(1) gender NOT NULL,
-                    PRIMARY KEY personId,
-                    FOREIGN KEY countryId REFERENCES Country(countryId));
 
-CREATE TABLE Event(         VARCHAR(8) eventId NOT NULL, 
-VARCHAR(128) eventName NOT NULL,
-                    PRIMARY KEY eventId);
+CREATE TABLE IF NOT EXISTS Country(
+     countryId VARCHAR(64) NOT NULL, 
+     countryName VARCHAR(64) NOT NULL, 
+     continentId VARCHAR(32) NOT NULL, 
+     iso2 VARCHAR(32) NOT NULL,
+     PRIMARY KEY (countryId)
+);
 
-CREATE TABLE RoundType(      CHAR(1) roundTypeId NOT NULL, 
-VARCHAR(32) roundTypeName NOT NULL,
-                    PRIMARY KEY roundTypeId);
+CREATE TABLE IF NOT EXISTS Continent(
+     continentId VARCHAR(32) NOT NULL, 
+     recordName VARCHAR(4) NOT NULL, 
+     continentName VARCHAR(32) NOT NULL,
+     PRIMARY KEY (continentId)
+);
+
+CREATE TABLE IF NOT EXISTS Championship(
+     championshipId INT UNSIGNED NOT NULL AUTO_INCREMENT, 
+     competitionId VARCHAR(64) NOT NULL, 
+     championshipType VARCHAR(32),
+     PRIMARY KEY (championshipId)
+);
+
+CREATE TABLE IF NOT EXISTS Person(
+     personId VARCHAR(10) NOT NULL, 
+     personName VARCHAR(128) NOT NULL, 
+     countryId VARCHAR(64) NOT NULL, 
+     gender CHAR(1) NOT NULL,
+     PRIMARY KEY (personId)
+);
+
+CREATE TABLE IF NOT EXISTS Event(
+     eventId VARCHAR(8) NOT NULL, 
+     eventName VARCHAR(128) NOT NULL,
+     PRIMARY KEY (eventId)
+);
+
+CREATE TABLE IF NOT EXISTS RoundType(
+     roundTypeId CHAR(1) NOT NULL, 
+     roundTypeName VARCHAR(32) NOT NULL,
+     PRIMARY KEY (roundTypeId)
+);
+
+
+ALTER TABLE Result
+     ADD FOREIGN KEY (competitionId) REFERENCES Competition(competitionId),
+     ADD FOREIGN KEY (eventId) REFERENCES Event(eventId),
+     ADD FOREIGN KEY (roundTypeId) REFERENCES RoundType(roundTypeId),
+     ADD FOREIGN KEY (personId) REFERENCES Person(personId)
+;
+
+ALTER TABLE Competition
+     ADD FOREIGN KEY (cityId) REFERENCES City(cityId),
+     ADD FOREIGN KEY (dateBeginId) REFERENCES Date_comp(dateId),
+     ADD FOREIGN KEY (dateEndId) REFERENCES Date_comp(dateId)
+;
+
+ALTER TABLE City
+     ADD FOREIGN KEY (countryId) REFERENCES Country(countryId)
+;
+
+ALTER TABLE Country
+     ADD FOREIGN KEY (continentId) REFERENCES Continent(continentId)
+;
+
+ALTER TABLE Championship
+     ADD FOREIGN KEY (competitionId) REFERENCES Competition(competitionId)
+;
+
+ALTER TABLE Person
+     ADD FOREIGN KEY (countryId) REFERENCES Country(countryId)
+;
