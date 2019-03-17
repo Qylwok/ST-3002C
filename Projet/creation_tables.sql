@@ -58,13 +58,6 @@ CREATE TABLE IF NOT EXISTS Continent(
      PRIMARY KEY (continentId)
 );
 
-CREATE TABLE IF NOT EXISTS Championship(
-     championshipId INT UNSIGNED NOT NULL AUTO_INCREMENT, 
-     competitionId VARCHAR(64) NOT NULL, 
-     championshipType VARCHAR(32),
-     PRIMARY KEY (championshipId)
-);
-
 CREATE TABLE IF NOT EXISTS Person(
      personId VARCHAR(10) NOT NULL, 
      personName VARCHAR(128) NOT NULL, 
@@ -105,10 +98,6 @@ ALTER TABLE City
 
 ALTER TABLE Country
      ADD FOREIGN KEY (continentId) REFERENCES Continent(continentId)
-;
-
-ALTER TABLE Championship
-     ADD FOREIGN KEY (competitionId) REFERENCES Competition(competitionId)
 ;
 
 ALTER TABLE Person
